@@ -8,6 +8,15 @@ app.use(express.static(public));
 // Enable form data parsing (needed for login, bookings, etc.)
 app.use(express.urlencoded({ extended: true }));
 // Set up mustache as view engine
-app.engine('mustache', mustacheExpress());
+app.engine('mustache', mustache());
 app.set('view engine','mustache');
 app.set('views',path.join(__dirname,'views'));
+const router = require('./routes/appRoutes');
+app.use('/', router);
+//start server
+const port = 9000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}. Ctrl^C to quit.`);
+});
+
+module.exports = app;
