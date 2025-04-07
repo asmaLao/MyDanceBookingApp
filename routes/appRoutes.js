@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const appController = require('../controllers/appControllers');
 // Homepage
 router.get('/', (req, res) => {
     res.render('index', { title: 'Welcome to MyDanceBookingApp!' });
 });
 
 // Login page
-router.get('/login', (req, res) => {
-    res.render('login', { title: 'Organiser Login' });
-});
+router.get('/login', appController.showLogin);
+router.post('/login', appController.handleLogin)
 
 
 // Default 404 handler
