@@ -1,0 +1,27 @@
+{{>partials/header}}
+
+<form method="POST" action="/courses/new">
+  <div class="form-group">
+    <label>Course Name</label>
+    <input type="text" class="form-control" name="name" required>
+
+    <label>Description</label>
+    <textarea class="form-control" name="description" rows="3" required></textarea>
+
+    <label>Duration</label>
+    <input type="text" class="form-control" name="duration" required>
+
+    <label>Start Date</label>
+    <input type="date" class="form-control" name="startDate" required>
+
+    <label>Price (£) </label>
+    <input type="number" class="form-control" name="price" required step ="0.01">
+
+    <label>Location</label>
+    <input type="text" class="form-control" name="location" required>
+
+    <button type="submit" class="btn btn-success mt-3">Add Course</button>
+  </div>
+</form>
+
+{{>partials/footer}}

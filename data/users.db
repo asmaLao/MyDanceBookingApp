@@ -1,2 +1,17 @@
+{"username":"organiser1","password":"pasword123","_id":"0fIw916oleK9FdAM"}
+{"username":"organiser1","password":"pasword123","_id":"4N6JupiZwpivU7iZ"}
 {"username":"organiser1","password":"pasword123","_id":"6mIEtWjfitXtxygD"}
+{"username":"organiser1","password":"pasword123","_id":"73uXmsGSafIsxOyU"}
+{"name":"WAD","description":"Web Application Development","duration":"2 h","startDate":"2025-04-11","price":20,"location":"Glasgow","createdAt":"2025-04-08T06:13:28.211Z","_id":"7IkEb4BuAo7iC24U"}
+{"username":"organiser1","password":"pasword123","_id":"AbDoUkMjcQg5zjTO"}
+{"username":"organiser1","password":"pasword123","_id":"Cvs9H8eHy4b1KsNR"}
+{"username":"organiser1","password":"pasword123","_id":"Nrkd81arV5CU87Cn"}
+{"username":"organiser1","password":"pasword123","_id":"PcrG5FK79WYFDdJe"}
 {"username":"organiser1","password":"pasword123","_id":"Rr0cYDWPUgQj6YBQ"}
+{"username":"organiser1","password":"pasword123","_id":"YXwikCxyrtHzLIgp"}
+{"username":"organiser1","password":"pasword123","_id":"bzACoMnzUpBbS9Lp"}
+{"username":"organiser1","password":"pasword123","_id":"fHSaCK4dZ08jtxao"}
+{"username":"organiser1","password":"pasword123","_id":"mg9YXGjOXNcXD22j"}
+{"username":"organiser1","password":"pasword123","_id":"VdpvnpY5H9PHgMGR"}
+{"type":"course","name":"programming","description":"java","duration":"2 h","startDate":"2025-04-10","price":20,"location":"Glasgow","createdAt":"2025-04-08T10:36:43.063Z","_id":"PIiAX73TnDoRYJk7"}
+{"type":"course","name":"programming","description":"java","duration":"2 h","startDate":"2025-04-10","price":25,"location":"Glasgow","createdAt":"2025-04-08T10:36:43.063Z","_id":"PIiAX73TnDoRYJk7"}

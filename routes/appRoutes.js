@@ -1,16 +1,30 @@
 const express = require('express');
 const router = express.Router();
 const appController = require('../controllers/appControllers');
-// Homepage
+
+// homepage
 router.get('/', (req, res) => {
     res.render('index', { title: 'Welcome to MyDanceBookingApp!' });
 });
 
-// Login page
+// login page
 router.get('/login', appController.showLogin);
 router.post('/login', appController.handleLogin)
 
+// organiser page
+router.get('/organiser', appController.showOrganiserDashboard);
 
+// addCourse page
+router.get('/courses/new', appController.showAddCourseForm);
+router.post('/courses/new', appController.handleAddCourse);
+
+//cources page
+router.get('/courses', appController.showAllCourses);
+router.post('/courses/delete', appController.deleteCourse);
+
+// edit page
+router.get('/courses/edit/:id', appController.showEditForm);
+router.post('/courses/edit/:id', appController.updateCourse);
 // Default 404 handler
 router.use((req, res) => {
     res.status(404);

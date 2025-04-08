@@ -1,0 +1,31 @@
+{{>partials/header}}
+
+{{#courses}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{description}}</p>
+      <ul>
+        <li><strong>Duration:</strong> {{duration}}</li>
+        <li><strong>Start Date:</strong> {{startDate}}</li>
+        <li><strong>Price:</strong> £{{price}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+      </ul>
+      <!-- delete  -->
+        <form action="/courses/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this course?');">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+      </form>
+      <!-- Edit -->
+      <a href="/courses/edit/{{_id}}" class="btn btn-warning btn-sm">Edit</a>
+
+      
+    </div>
+  </div>
+{{/courses}}
+
+{{^courses}}
+  <p>No courses available yet.</p>
+{{/courses}}
+
+{{>partials/footer}}
