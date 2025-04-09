@@ -39,13 +39,14 @@ class AppModel{
         });
     }
 
-    addCourse(name, description, duration, startDate, price, location) {
+    addCourse(name, description, duration, startDate, time,  price, location) {
         const newCourse = {
           type: 'course',
           name,
           description,
           duration,
           startDate,
+          time,
           price: parseFloat(price),
           location,
           createdAt: new Date().toISOString()
@@ -145,7 +146,44 @@ class AppModel{
         });
       }
       
-      
+      // Get all organisers
+getAllOrganisers() {
+    return new Promise((resolve, reject) => {
+      this.db.find({ type: 'organiser' }, (err, docs) => {
+        if (err) reject(err);
+        else resolve(docs);
+      });
+    });
+  }
+  
+  // Add organiser
+  addOrganiser(username, password) {
+    const organiser = {
+      type: 'organiser',
+      username,
+      password
+    };
+    return new Promise((resolve, reject) => {
+      this.db.insert(organiser, (err, doc) => {
+        if (err) reject(err);
+        else {
+          console.log('Organiser added:', doc);
+          resolve(doc);
+        }
+      });
+    });
+  }
+  
+  // Delete organiser
+  deleteOrganiser(id) {
+    return new Promise((resolve, reject) => {
+      this.db.remove({ _id: id }, {}, (err, numRemoved) => {
+        if (err) reject(err);
+        else resolve(numRemoved);
+      });
+    });
+  }
+  
       
       
 

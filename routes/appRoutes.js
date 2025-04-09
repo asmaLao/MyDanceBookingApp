@@ -35,6 +35,11 @@ router.post('/courses/enrol/:id', appController.handleEnrolment);
 //class list
 router.get('/courses/:id/classlist', appController.showClassList);
 
+// View and manage organisers
+router.get('/organisers', appController.showOrganiserManagement);
+router.post('/organisers/add', appController.addOrganiser);
+router.post('/organisers/delete', appController.deleteOrganiser);
+
 // Default 404 handler
 router.use((req, res) => {
     res.status(404);

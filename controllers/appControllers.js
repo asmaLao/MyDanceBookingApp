@@ -39,11 +39,11 @@ exports.handleLogin = (req, res) => {
     res.render('addCourse', { title: 'Add New Course' });
   };
   exports.handleAddCourse = (req, res) => {
-    const { name, description, duration, startDate, price, location } = req.body;
+    const { name, description, duration, startDate, time, price, location } = req.body;
   
-    db.addCourse(name, description, duration, startDate, price, location)
+    db.addCourse(name, description, duration, startDate, time,  price, location)
       .then(() => {
-        res.redirect('/organiser'); // After adding, go back to dashboard
+        res.redirect('/organiser');
       })
       .catch((err) => {
         console.error('Error adding course:', err);
@@ -113,13 +113,14 @@ exports.showEditForm = (req, res) => {
   // handle the update POST request
   exports.updateCourse = (req, res) => {
     const courseId = req.params.id;
-    const { name, description, duration, startDate, price, location } = req.body;
+    const { name, description, duration, startDate, time, price, location } = req.body;
   
     db.updateCourse(courseId, {
       name,
       description,
       duration,
       startDate,
+      time,
       price: parseFloat(price),
       location
     })
@@ -183,5 +184,42 @@ exports.showEnrolForm = (req, res) => {
         res.status(500).send('Internal Server Error');
       });
   };
+  // Show organiser management page
+exports.showOrganiserManagement = (req, res) => {
+    db.getAllOrganisers()
+      .then(organisers => {
+        res.render('manageOrganisers', {
+          title: 'Manage Organisers',
+          organisers
+        });
+      })
+      .catch(err => {
+        console.error('Error fetching organisers:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
+  // Add new organiser
+  exports.addOrganiser = (req, res) => {
+    const { username, password } = req.body;
+    db.addOrganiser(username, password)
+      .then(() => res.redirect('/organisers'))
+      .catch(err => {
+        console.error('Error adding organiser:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
+  // Delete organiser
+  exports.deleteOrganiser = (req, res) => {
+    const organiserId = req.body.id;
+    db.deleteOrganiser(organiserId)
+      .then(() => res.redirect('/organisers'))
+      .catch(err => {
+        console.error('Error deleting organiser:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
   
   

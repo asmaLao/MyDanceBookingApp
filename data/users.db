@@ -4,13 +4,20 @@
 {"username":"organiser1","password":"pasword123","_id":"6mIEtWjfitXtxygD"}
 {"username":"organiser1","password":"pasword123","_id":"73uXmsGSafIsxOyU"}
 {"name":"WAD","description":"Web Application Development","duration":"2 h","startDate":"2025-04-11","price":20,"location":"Glasgow","createdAt":"2025-04-08T06:13:28.211Z","_id":"7IkEb4BuAo7iC24U"}
+{"username":"organiser1","password":"pasword123","_id":"7XEDtshzuWxlbgL3"}
+{"username":"organiser1","password":"pasword123","_id":"7ZANbM3pcoAOPofO"}
+{"username":"organiser1","password":"pasword123","_id":"9O41NXBHtUQoNMul"}
+{"username":"organiser1","password":"pasword123","_id":"9lek7iR0MkbycOXM"}
 {"username":"organiser1","password":"pasword123","_id":"AbDoUkMjcQg5zjTO"}
+{"type":"course","name":"maths","description":"level3","duration":"2 h","startDate":"2025-04-11","time":"12:00","price":20,"location":"Glasgow","createdAt":"2025-04-09T18:52:33.072Z","_id":"AiEMptNgRRokqhVy"}
 {"type":"enrolment","courseId":"PIiAX73TnDoRYJk7","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-08T12:27:57.044Z","_id":"CMErsTLswMqEDkOa"}
 {"username":"organiser1","password":"pasword123","_id":"Cvs9H8eHy4b1KsNR"}
 {"username":"organiser1","password":"pasword123","_id":"Dc296MwDYWlYGCO7"}
 {"username":"organiser1","password":"pasword123","_id":"G7Ix09ci98nMWAg8"}
 {"type":"enrolment","courseId":"mGFlsaGRXlXY9ylc","name":"adam","email":"t@gmail.com","enrolledAt":"2025-04-09T07:30:57.045Z","_id":"ICoiRKYJuswyeJ4N"}
 {"username":"organiser1","password":"pasword123","_id":"Nrkd81arV5CU87Cn"}
+{"type":"enrolment","courseId":"Pb3BtlgbAuQgub3q","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-09T10:49:27.278Z","_id":"OE44vAdFf62tIETE"}
+{"type":"course","name":"project","description":"management","duration":"1h","startDate":"2025-04-11","price":19,"location":"Glasgow","createdAt":"2025-04-09T10:48:49.610Z","_id":"Pb3BtlgbAuQgub3q"}
 {"username":"organiser1","password":"pasword123","_id":"PcrG5FK79WYFDdJe"}
 {"username":"organiser1","password":"pasword123","_id":"QiMmhPoV9Di0iUMN"}
 {"username":"organiser1","password":"pasword123","_id":"Rr0cYDWPUgQj6YBQ"}
@@ -19,6 +26,7 @@
 {"username":"organiser1","password":"pasword123","_id":"YXwikCxyrtHzLIgp"}
 {"username":"organiser1","password":"pasword123","_id":"bzACoMnzUpBbS9Lp"}
 {"username":"organiser1","password":"pasword123","_id":"ddWvzKDTL0j7eF2K"}
+{"type":"organiser","username":"admin2","password":"12345","_id":"dnmQpIDiermX1Xrm"}
 {"username":"organiser1","password":"pasword123","_id":"fHSaCK4dZ08jtxao"}
 {"username":"organiser1","password":"pasword123","_id":"gB4mzCfo5ZRoSf5a"}
 {"username":"organiser1","password":"pasword123","_id":"gUwztuDa7QMCzO4E"}
@@ -29,6 +37,5 @@
 {"username":"organiser1","password":"pasword123","_id":"nKnl0PyVkCRAbjHQ"}
 {"username":"organiser1","password":"pasword123","_id":"noPvNglttBenWtiH"}
 {"username":"organiser1","password":"pasword123","_id":"xxdpSLQGNgzDdPdy"}
-{"username":"organiser1","password":"pasword123","_id":"7ZANbM3pcoAOPofO"}
-{"type":"course","name":"project","description":"management","duration":"1h","startDate":"2025-04-11","price":19,"location":"Glasgow","createdAt":"2025-04-09T10:48:49.610Z","_id":"Pb3BtlgbAuQgub3q"}
-{"type":"enrolment","courseId":"Pb3BtlgbAuQgub3q","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-09T10:49:27.278Z","_id":"OE44vAdFf62tIETE"}
+{"username":"organiser1","password":"pasword123","_id":"Lt4VDCGYolFI9bct"}
+{"type":"enrolment","courseId":"AiEMptNgRRokqhVy","name":"jojo","email":"j@gmail.com","enrolledAt":"2025-04-09T19:00:45.513Z","_id":"JLN1KNzYgpINmzhn"}
