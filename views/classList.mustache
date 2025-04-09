@@ -1,0 +1,32 @@
+{{>partials/header}}
+
+<h2 class="text-center">{{heading}}</h2>
+
+{{#enrolments.length}}
+<table class="table table-bordered mt-4">
+  <thead>
+    <tr>
+      <th>Participant Name</th>
+      <th>Email Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#enrolments}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+      </tr>
+    {{/enrolments}}
+  </tbody>
+</table>
+{{/enrolments.length}}
+
+{{^enrolments.length}}
+<p>No participants enrolled yet.</p>
+{{/enrolments.length}}
+<div class="text-center mt-4">
+  <a href="/organiser" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+
+
+{{>partials/footer}}

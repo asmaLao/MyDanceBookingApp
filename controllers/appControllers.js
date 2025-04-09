@@ -61,6 +61,21 @@ exports.handleLogin = (req, res) => {
         res.status(500).send('Internal Server Error');
       });
   };
+  // reder the organiser course management page 
+exports.showOrganiserCourses = (req, res) => {
+    db.getAllCourses()
+      .then(courses => {
+        res.render('organiserCourses', {
+          title: 'Manage Courses',
+          courses: courses
+        });
+      })
+      .catch(err => {
+        console.error('Error fetching courses for organiser:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
   
   
   
@@ -70,7 +85,7 @@ exports.handleLogin = (req, res) => {
     db.deleteCourse(courseId)
       .then(() => {
         console.log(`Course ${courseId} deleted`);
-        res.redirect('/courses');
+        res.redirect('/organiser/courses');
       })
       .catch(err => {
         console.error('Delete failed:', err);
@@ -109,11 +124,64 @@ exports.showEditForm = (req, res) => {
       location
     })
       .then(() => {
-        res.redirect('/courses');
+        res.redirect('/organiser/courses');
       })
       .catch(err => {
         console.error('Error updating course:', err);
         res.status(500).send('Internal Server Error');
       });
   };
+  // show enrolment form
+exports.showEnrolForm = (req, res) => {
+    const courseId = req.params.id;
+  
+    db.getCourseById(courseId)
+      .then(course => {
+        res.render('enrolForm', {
+          title: 'Course Enrolment',
+          course: course
+        });
+      })
+      .catch(err => {
+        console.error('Error loading enrolment form:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
+  // handle enrolment submission
+  exports.handleEnrolment = (req, res) => {
+    const courseId = req.params.id;
+    const { name, email } = req.body;
+  
+    db.addEnrolment(courseId, name, email)
+      .then(() => {
+        res.send(`<p>Thank you for enrolling, ${name}! <a href="/courses">Back to courses</a></p>`);
+      })
+      .catch(err => {
+        console.error('Enrolment error:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  exports.showClassList = (req, res) => {
+    const courseId = req.params.id;
+  
+    db.getCourseById(courseId)
+      .then(course => {
+        db.getEnrolmentsByCourse(courseId)
+          .then(enrolments => {
+            res.render('classList', {
+
+              title: 'Class List',
+              heading: `Participants for ${course.name}`,
+              course,
+              enrolments
+            });
+          });
+      })
+      .catch(err => {
+        console.error('Error showing class list:', err);
+        res.status(500).send('Internal Server Error');
+      });
+  };
+  
   

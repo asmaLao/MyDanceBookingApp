@@ -105,6 +105,46 @@ class AppModel{
         });
       }
       
+      addEnrolment(courseId, name, email) {
+        const enrolment = {
+          type: 'enrolment',
+          courseId,
+          name,
+          email,
+          enrolledAt: new Date().toISOString()
+        };
+      
+        return new Promise((resolve, reject) => {
+          this.db.insert(enrolment, (err, doc) => {
+            if (err) reject(err);
+            else {
+              console.log('New enrolment:', doc);
+              resolve(doc);
+            }
+          });
+        });
+      }
+      getCourseById(courseId) {
+        return new Promise((resolve, reject) => {
+          this.db.findOne({ _id: courseId, type: 'course' }, (err, course) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(course);
+            }
+          });
+        });
+      }
+
+      getEnrolmentsByCourse(courseId) {
+        return new Promise((resolve, reject) => {
+          this.db.find({ type: 'enrolment', courseId }, (err, enrolments) => {
+            if (err) reject(err);
+            else resolve(enrolments);
+          });
+        });
+      }
+      
       
       
       

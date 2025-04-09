@@ -11,15 +11,8 @@
         <li><strong>Price:</strong> £{{price}}</li>
         <li><strong>Location:</strong> {{location}}</li>
       </ul>
-      <!-- delete  -->
-        <form action="/courses/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this course?');">
-        <input type="hidden" name="id" value="{{_id}}">
-        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-      </form>
-      <!-- Edit -->
-      <a href="/courses/edit/{{_id}}" class="btn btn-warning btn-sm">Edit</a>
-
-      
+      <!-- Enrol -->
+      <a href="/courses/enrol/{{_id}}" class="btn btn-success btn-sm">Enrol</a>
     </div>
   </div>
 {{/courses}}

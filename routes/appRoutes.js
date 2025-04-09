@@ -13,6 +13,9 @@ router.post('/login', appController.handleLogin)
 
 // organiser page
 router.get('/organiser', appController.showOrganiserDashboard);
+//management page
+router.get('/organiser/courses', appController.showOrganiserCourses);
+
 
 // addCourse page
 router.get('/courses/new', appController.showAddCourseForm);
@@ -25,6 +28,13 @@ router.post('/courses/delete', appController.deleteCourse);
 // edit page
 router.get('/courses/edit/:id', appController.showEditForm);
 router.post('/courses/edit/:id', appController.updateCourse);
+// enrolement
+router.get('/courses/enrol/:id', appController.showEnrolForm);
+router.post('/courses/enrol/:id', appController.handleEnrolment);
+
+//class list
+router.get('/courses/:id/classlist', appController.showClassList);
+
 // Default 404 handler
 router.use((req, res) => {
     res.status(404);
