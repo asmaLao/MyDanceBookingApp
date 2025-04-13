@@ -11,20 +11,7 @@ class AppModel{
     
     }
 
-    // adding a sample user to test loging functionality
-    init() { 
-        const sample ={
-        username: 'organiser1',
-        password: 'pasword123'
-        };
-        this.db.insert(sample, (err, doc) => {
-            if (err) {
-            console.log('Error inserting sample user:', err);
-            } else {
-            console.log('Sample organiser inserted:', doc);
-            }
-        });
-    }
+
     // Check if a user with the given username and password exists
     validateUser(username, password) {
         return new Promise((resolve, reject) => {

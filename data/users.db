@@ -15,6 +15,8 @@
 {"username":"organiser1","password":"pasword123","_id":"Dc296MwDYWlYGCO7"}
 {"username":"organiser1","password":"pasword123","_id":"G7Ix09ci98nMWAg8"}
 {"type":"enrolment","courseId":"mGFlsaGRXlXY9ylc","name":"adam","email":"t@gmail.com","enrolledAt":"2025-04-09T07:30:57.045Z","_id":"ICoiRKYJuswyeJ4N"}
+{"type":"enrolment","courseId":"AiEMptNgRRokqhVy","name":"jojo","email":"j@gmail.com","enrolledAt":"2025-04-09T19:00:45.513Z","_id":"JLN1KNzYgpINmzhn"}
+{"username":"organiser1","password":"pasword123","_id":"Lt4VDCGYolFI9bct"}
 {"username":"organiser1","password":"pasword123","_id":"Nrkd81arV5CU87Cn"}
 {"type":"enrolment","courseId":"Pb3BtlgbAuQgub3q","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-09T10:49:27.278Z","_id":"OE44vAdFf62tIETE"}
 {"type":"course","name":"project","description":"management","duration":"1h","startDate":"2025-04-11","price":19,"location":"Glasgow","createdAt":"2025-04-09T10:48:49.610Z","_id":"Pb3BtlgbAuQgub3q"}
@@ -37,5 +39,6 @@
 {"username":"organiser1","password":"pasword123","_id":"nKnl0PyVkCRAbjHQ"}
 {"username":"organiser1","password":"pasword123","_id":"noPvNglttBenWtiH"}
 {"username":"organiser1","password":"pasword123","_id":"xxdpSLQGNgzDdPdy"}
-{"username":"organiser1","password":"pasword123","_id":"Lt4VDCGYolFI9bct"}
-{"type":"enrolment","courseId":"AiEMptNgRRokqhVy","name":"jojo","email":"j@gmail.com","enrolledAt":"2025-04-09T19:00:45.513Z","_id":"JLN1KNzYgpINmzhn"}
+{"type":"enrolment","courseId":"mGFlsaGRXlXY9ylc","name":"samar","email":"s@gmail.com","enrolledAt":"2025-04-13T05:56:00.486Z","_id":"W8Qv2a0ydbBpqK1B"}
+{"type":"organiser","username":"admin1","password":"organiser123","_id":"9zsZW06YmW1s2Zjp"}
+{"$$deleted":true,"_id":"dnmQpIDiermX1Xrm"}

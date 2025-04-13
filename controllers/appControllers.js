@@ -1,7 +1,6 @@
 const AppModel = require('../models/appModel');
 const db = new AppModel('./data/users.db');
-console.log('Model loaded. Calling db.init()');
-db.init();
+console.log('Model loaded.');
 // Render the login form
 exports.showLogin=(req,res)=>{
     res.render('login', {title: 'Organiser Login'});
