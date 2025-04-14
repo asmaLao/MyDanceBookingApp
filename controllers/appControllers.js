@@ -219,6 +219,15 @@ exports.showOrganiserManagement = (req, res) => {
         res.status(500).send('Internal Server Error');
       });
   };
+
+  // Handle logout
+// Handle Logout
+exports.handleLogout = (req, res) => {
+    console.log('Logging out...');
+    res.redirect('/login');
+};
+
+
   
   
   

@@ -8,6 +8,7 @@
 {"username":"organiser1","password":"pasword123","_id":"7ZANbM3pcoAOPofO"}
 {"username":"organiser1","password":"pasword123","_id":"9O41NXBHtUQoNMul"}
 {"username":"organiser1","password":"pasword123","_id":"9lek7iR0MkbycOXM"}
+{"type":"organiser","username":"admin1","password":"organiser123","_id":"9zsZW06YmW1s2Zjp"}
 {"username":"organiser1","password":"pasword123","_id":"AbDoUkMjcQg5zjTO"}
 {"type":"course","name":"maths","description":"level3","duration":"2 h","startDate":"2025-04-11","time":"12:00","price":20,"location":"Glasgow","createdAt":"2025-04-09T18:52:33.072Z","_id":"AiEMptNgRRokqhVy"}
 {"type":"enrolment","courseId":"PIiAX73TnDoRYJk7","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-08T12:27:57.044Z","_id":"CMErsTLswMqEDkOa"}
@@ -24,11 +25,11 @@
 {"username":"organiser1","password":"pasword123","_id":"QiMmhPoV9Di0iUMN"}
 {"username":"organiser1","password":"pasword123","_id":"Rr0cYDWPUgQj6YBQ"}
 {"username":"organiser1","password":"pasword123","_id":"VdpvnpY5H9PHgMGR"}
+{"type":"enrolment","courseId":"mGFlsaGRXlXY9ylc","name":"samar","email":"s@gmail.com","enrolledAt":"2025-04-13T05:56:00.486Z","_id":"W8Qv2a0ydbBpqK1B"}
 {"username":"organiser1","password":"pasword123","_id":"WNKs1CT4gTsWY4Yq"}
 {"username":"organiser1","password":"pasword123","_id":"YXwikCxyrtHzLIgp"}
 {"username":"organiser1","password":"pasword123","_id":"bzACoMnzUpBbS9Lp"}
 {"username":"organiser1","password":"pasword123","_id":"ddWvzKDTL0j7eF2K"}
-{"type":"organiser","username":"admin2","password":"12345","_id":"dnmQpIDiermX1Xrm"}
 {"username":"organiser1","password":"pasword123","_id":"fHSaCK4dZ08jtxao"}
 {"username":"organiser1","password":"pasword123","_id":"gB4mzCfo5ZRoSf5a"}
 {"username":"organiser1","password":"pasword123","_id":"gUwztuDa7QMCzO4E"}
@@ -39,6 +40,3 @@
 {"username":"organiser1","password":"pasword123","_id":"nKnl0PyVkCRAbjHQ"}
 {"username":"organiser1","password":"pasword123","_id":"noPvNglttBenWtiH"}
 {"username":"organiser1","password":"pasword123","_id":"xxdpSLQGNgzDdPdy"}
-{"type":"enrolment","courseId":"mGFlsaGRXlXY9ylc","name":"samar","email":"s@gmail.com","enrolledAt":"2025-04-13T05:56:00.486Z","_id":"W8Qv2a0ydbBpqK1B"}
-{"type":"organiser","username":"admin1","password":"organiser123","_id":"9zsZW06YmW1s2Zjp"}
-{"$$deleted":true,"_id":"dnmQpIDiermX1Xrm"}

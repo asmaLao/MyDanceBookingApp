@@ -10,6 +10,8 @@ router.get('/', (req, res) => {
 // login page
 router.get('/login', appController.showLogin);
 router.post('/login', appController.handleLogin)
+// Logout
+router.get('/logout', appController.handleLogout);
 
 // organiser page
 router.get('/organiser', appController.showOrganiserDashboard);
