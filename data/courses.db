@@ -1,2 +1,2 @@
-{"type":"course","name":"java","description":"level3","duration":"3 h","startDate":"2025-04-21","time":"11:00","price":20,"location":"Glasgow","createdAt":"2025-04-15T06:03:09.978Z","_id":"EiMfqI01DhiMdPhK"}
+{"type":"course","name":"Programming 3","description":"level3","duration":"3 h","startDate":"2025-04-21","time":"11:00","price":20,"location":"Glasgow","createdAt":"2025-04-15T06:03:09.978Z","_id":"EiMfqI01DhiMdPhK"}
 {"type":"enrolment","courseId":"EiMfqI01DhiMdPhK","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-15T06:20:48.162Z","_id":"y44HDOhMQQtbM5s3"}

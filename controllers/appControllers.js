@@ -216,7 +216,7 @@ exports.addOrganiser = (req, res) => {
   // Delete organiser
   exports.deleteOrganiser = (req, res) => {
     const organiserId = req.body.id;
-    db.deleteOrganiser(organiserId)
+    userDAO.deleteOrganiser(organiserId)
       .then(() => res.redirect('/organisers'))
       .catch(err => {
         console.error('Error deleting organiser:', err);
