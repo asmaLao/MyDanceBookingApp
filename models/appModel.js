@@ -1,29 +1,16 @@
 const nedb = require('nedb');
-const { init } = require('../app');
+const path = require('path');
 class AppModel{
+    
     constructor(dbFilePath) {
         if (dbFilePath) {
-            this.db = new nedb({ filename: dbFilePath, autoload: true });
-            console.log('DB connected to ' + dbFilePath);
+          const fullPath = path.join(__dirname, '..', dbFilePath);
+          this.db = new nedb({ filename: fullPath, autoload: true });
+          console.log('DB connected to ' + fullPath);
         } else {
-            this.db = new nedb();
+          this.db = new nedb(); 
         }
     
-    }
-
-
-    // Check if a user with the given username and password exists
-    validateUser(username, password) {
-        return new Promise((resolve, reject) => {
-            this.db.findOne({ username, password }, (err, user) => {
-            if (err) {
-                console.log('Error in validateUser:', err);
-                reject(err);
-            } else {
-                resolve(user);
-            }
-            });
-        });
     }
 
     addCourse(name, description, duration, startDate, time,  price, location) {
@@ -133,43 +120,7 @@ class AppModel{
         });
       }
       
-      // Get all organisers
-getAllOrganisers() {
-    return new Promise((resolve, reject) => {
-      this.db.find({ type: 'organiser' }, (err, docs) => {
-        if (err) reject(err);
-        else resolve(docs);
-      });
-    });
-  }
   
-  // Add organiser
-  addOrganiser(username, password) {
-    const organiser = {
-      type: 'organiser',
-      username,
-      password
-    };
-    return new Promise((resolve, reject) => {
-      this.db.insert(organiser, (err, doc) => {
-        if (err) reject(err);
-        else {
-          console.log('Organiser added:', doc);
-          resolve(doc);
-        }
-      });
-    });
-  }
-  
-  // Delete organiser
-  deleteOrganiser(id) {
-    return new Promise((resolve, reject) => {
-      this.db.remove({ _id: id }, {}, (err, numRemoved) => {
-        if (err) reject(err);
-        else resolve(numRemoved);
-      });
-    });
-  }
   
       
       

@@ -1,29 +1,31 @@
 const AppModel = require('../models/appModel');
-const db = new AppModel('./data/users.db');
+const bcrypt = require('bcrypt'); 
+const userDAO = require('../models/UserDAO');
+const db = new AppModel('./data/courses.db');
 console.log('Model loaded.');
 // Render the login form
 exports.showLogin=(req,res)=>{
     res.render('login', {title: 'Organiser Login'});
 
 };
-// Handles form submission and validates login
+
 exports.handleLogin = (req, res) => {
     const { username, password } = req.body;
-    console.log("Login submitted:", username, password);
-    db.validateUser(username, password)
+    userDAO.lookupOrganiser(username)
       .then(user => {
-        if (user) {
-          // Login successful
-          console.log('Login success:', user.username);
-          res.redirect('/organiser'); // this page will be created later
-        } else {
-          // Invalid login
-          res.render('login', {
-            title: 'Login Failed',
-            message: 'Invalid username or password'
-          });
+        if (!user) {
+            return res.render('login', { title: 'Login Failed', message: 'Invalid username or password' });
         }
-      })
+        return bcrypt.compare(password, user.password)
+            .then(match => {
+                if (match) {
+                    console.log('Login success:', user.username);
+                    res.redirect('/organiser');
+                } else {
+                    res.render('login', { title: 'Login Failed', message: 'Invalid username or password' });
+                }
+            });
+    })
       .catch(err => {
         console.error('Login error:', err);
         res.status(500).send('Internal Server Error');
@@ -185,8 +187,10 @@ exports.showEnrolForm = (req, res) => {
   };
   // Show organiser management page
 exports.showOrganiserManagement = (req, res) => {
-    db.getAllOrganisers()
+    console.log("showOrganiserManagement CALLED"); 
+    userDAO.getAllOrganisers()
       .then(organisers => {
+        console.log("Organisers fetched:", organisers); 
         res.render('manageOrganisers', {
           title: 'Manage Organisers',
           organisers
@@ -198,17 +202,17 @@ exports.showOrganiserManagement = (req, res) => {
       });
   };
   
-  // Add new organiser
-  exports.addOrganiser = (req, res) => {
-    const { username, password } = req.body;
-    db.addOrganiser(username, password)
-      .then(() => res.redirect('/organisers'))
-      .catch(err => {
-        console.error('Error adding organiser:', err);
-        res.status(500).send('Internal Server Error');
-      });
-  };
-  
+exports.addOrganiser = (req, res) => {
+  const { username, password } = req.body;
+
+  userDAO.createOrganiser(username, password)
+    .then(() => res.redirect('/organisers'))
+    .catch(err => {
+      console.error('Error adding organiser:', err);
+      res.status(500).send('Internal Server Error');
+    });
+};
+
   // Delete organiser
   exports.deleteOrganiser = (req, res) => {
     const organiserId = req.body.id;
@@ -220,10 +224,11 @@ exports.showOrganiserManagement = (req, res) => {
       });
   };
 
-  // Handle logout
+
 // Handle Logout
 exports.handleLogout = (req, res) => {
     console.log('Logging out...');
+    res.clearCookie('jwt');
     res.redirect('/login');
 };
 
