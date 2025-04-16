@@ -6,7 +6,7 @@ const appController = require('../controllers/appControllers');
 
 // homepage
 router.get('/', (req, res) => {
-    res.render('index', { title: 'Welcome to MyDanceBookingApp!' });
+    res.render('index', { title: 'Welcome to Asma Dance Center!' });
 });
 
 // login page

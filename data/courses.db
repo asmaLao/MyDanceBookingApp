@@ -1,2 +1,10 @@
 {"type":"course","name":"Programming 3","description":"level3","duration":"3 h","startDate":"2025-04-21","time":"11:00","price":20,"location":"Glasgow","createdAt":"2025-04-15T06:03:09.978Z","_id":"EiMfqI01DhiMdPhK"}
 {"type":"enrolment","courseId":"EiMfqI01DhiMdPhK","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-15T06:20:48.162Z","_id":"y44HDOhMQQtbM5s3"}
+{"type":"course","name":"Beginner Ballet","description":"A 12-week course introducing ballet basics.","duration":"1h","startDate":"2025-04-22","time":"17:00","price":10,"location":"Glasgow","createdAt":"2025-04-16T06:37:00.574Z","_id":"O9GVy214g3YRxcSA"}
+{"$$deleted":true,"_id":"EiMfqI01DhiMdPhK"}
+{"type":"course","name":"Beginner Ballet","description":"12-week course introducing ballet basics.","duration":"1h","startDate":"2025-04-22","time":"17:00","price":10,"location":"Glasgow","createdAt":"2025-04-16T06:37:00.574Z","_id":"O9GVy214g3YRxcSA"}
+{"type":"course","name":"Contemporary Flow ","description":"Focused on expressive movement and body control.","duration":"1.5 h","startDate":"2025-04-25","time":"18:00","price":14,"location":"Studio 2","createdAt":"2025-04-16T06:42:15.413Z","_id":"0nGPaHDv2617Nzoc"}
+{"type":"course","name":"Beginner Ballet","description":"12-week course introducing ballet basics.","duration":"1h","startDate":"2025-04-22","time":"17:00","price":10,"location":"Studio 1","createdAt":"2025-04-16T06:37:00.574Z","_id":"O9GVy214g3YRxcSA"}
+{"type":"enrolment","courseId":"0nGPaHDv2617Nzoc","name":"Asma","email":"a@gmail.com","enrolledAt":"2025-04-16T06:43:02.749Z","_id":"oYyhLgAzv48IDb2M"}
+{"type":"enrolment","courseId":"0nGPaHDv2617Nzoc","name":"Adam","email":"adam@email.com","enrolledAt":"2025-04-16T06:43:29.597Z","_id":"DviVzoalYAuXRlNy"}
+{"type":"enrolment","courseId":"O9GVy214g3YRxcSA","name":"Sara","email":"sara@gmail.com","enrolledAt":"2025-04-16T06:43:57.548Z","_id":"TRdGn9TA1nsEn8NJ"}
