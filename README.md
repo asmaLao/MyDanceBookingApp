@@ -12,7 +12,7 @@ This is a dance course booking system developed using Node.js, Express, Mustache
 - JWT (Authentication)
 - Bootstrap (Styling)
 ## How to run the project
-1. Clone the repository: git clone https://github.com/your-username/MyDanceBookingApp.git
+1. Clone the repository: git clone https://github.com/asmaLao/MyDanceBookingApp.git
 2. Install dependencies: npm install
 3. Create a `.env` file: ACCESS_TOKEN_SECRET= your secret key
 4. Start the server: node app.js
