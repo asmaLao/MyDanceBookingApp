@@ -4,13 +4,13 @@ This is a dance course booking system developed using Node.js, Express, Mustache
 - Pubplic users can view available dance courses and enrol in a course.
 - Orgnisers can login securely, add, edit and  delete courses, manage organisers and view list calsses.
 ## Technologies Used
-- Node.js
-- Express
-- Mustache
-- NeDB (Local Database)
-- bcrypt (Password Hashing)
-- JWT (Authentication)
-- Bootstrap (Styling)
+- Node.js: server-side JavaScript runtime
+- Express: web application framework for Node.js
+- Mustache: template engine for rendering views
+- NeDB: local Database for storing data
+- bcrypt: password Hashing for secure authentication
+- JWT (JSON Web Tokens): for authentication and route protection
+- Bootstrap: CSS framework for styling and responsive layout
 ## How to run the project
 1. Clone the repository: git clone https://github.com/asmaLao/MyDanceBookingApp.git
 2. Install dependencies: npm install
