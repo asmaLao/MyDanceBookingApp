@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
 
 // login page
 router.get('/login', appController.showLogin);
-// router.post('/login', appController.handleLogin)
 router.post('/login', auth.login, appController.showOrganiserDashboard);
 
 
@@ -45,7 +44,6 @@ router.get('/courses/:id/classlist', appController.showClassList);
 // View and manage organisers
 router.get('/organisers', auth.verify,  appController.showOrganiserManagement);
 
-//router.get('/organisers', auth.verify,  appController.showOrganiserManagement);
 router.post('/organisers/add', auth.verify, appController.addOrganiser);
 router.post('/organisers/delete', auth.verify,  appController.deleteOrganiser);
 
